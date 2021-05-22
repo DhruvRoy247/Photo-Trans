@@ -34,12 +34,9 @@ It is recommended to implement the project in a python virtual environemt and in
 
 ---
 
-Pratham Sharma
+Kumar Dhruv ROy
 
 Student at Vellore Institute of Technology, Vellore, Tamil Nadu, India
 
-Reach out to me: prathams2425@gmail.com
+Reach out to me: dhruv2472000@gmail.com
 
-LinkedIn profile: https://www.linkedin.com/in/pratham-sharma-620418178/
-
-Kaggle profile: https://www.kaggle.com/prathamsharma123
