@@ -34,7 +34,7 @@ It is recommended to implement the project in a python virtual environemt and in
 
 ---
 
-Kumar Dhruv ROy
+Kumar Dhruv Roy
 
 Student at Vellore Institute of Technology, Vellore, Tamil Nadu, India
 
