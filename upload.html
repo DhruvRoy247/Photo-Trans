@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Upload Image</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body style="background-color:#e6f3ff; font-family: perpetua">
+        <div class="header" style="text-align: center">
+            <h1>PhotoTrans - A Simple Photo-translation App</h1>
+        </div>
+        <div class="main-content" style="margin: 0 auto; align-content: center; width: 400px;">
+            <div class="column" style="background-color:#cce6ff; font-size: 12px;">
+                <h2 style="text-align:justify-all;">
+                    HOW IT WORKS
+                    <p>PhotoTrans extracts and translates text in images with the help of an OCR engine and Google's translation libraries.</p>
+                    <p>Images uploaded are pre-processed before the OCR engine performs its magic on the image to extract text from it.</p>
+                    <p>The extracted text is then translated to English for you to understand.</p>
+                    <br>
+                    For your information: We do not store images uploaded to PhotoTrans, neither do we store any personal information about users such as location.
+                    <br>Your privacy is safe while using PhotoTrans. Happy Touring!
+                    <br>
+                </h2>
+            </div>
+            <div class="column" style="background-color:#cce6ff; font-size: 12px">
+                <h2 style="text-align:justify-all;">
+                    HOW TO USE PhotoTrans
+                    <p>Step 1: Click a picture with your smartphone camera. Place the text clearly in the image for best results.</p>
+                    <p>Step 2: Upload picture to PhotoTrans.</p>
+                    <p>Step 3: Translated text will be displayed on your screen.</p>
+                    It is that easy.
+                    <br>
+                </h2>
+            </div>
+        </div>
+        <div class="photo-trans" style="background-color:#cce6ff;">
+            <br>
+            <br>
+            {% if msg %}
+            <h1 style="text-align:center;">
+                {{ msg }}
+            </h1>
+            {% endif %}
+            <h1 style="text-align:center; font-size:175%">UPLOAD NEW FILE</h1>
+            <form style="text-align:center; font-size:125%" method=post enctype=multipart/form-data>
+                <p><input type=file name=file><input type=submit value=UPLOAD>
+                </p>
+            </form>
+            <h1 style="text-align:center; font-size:175%">RESULT:</h1>
+                {% if extracted_text %}
+                <p style="font-size:125%; text-align:center;"> The extracted text from the uploaded image and its translation is: 
+                <p style="font-size:125%; text-align:center;">
+                <b> {{ extracted_text }} </b>
+                </p>
+                </p>
+                {% else %}
+                <p style="font-size:125%; text-align:center;">
+                The extracted text and its translation will be displayed here
+                </p>
+                {% endif %}
+            <br>
+            <br>
+        </div>
+    </body>
+</html>
